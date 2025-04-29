@@ -44,11 +44,10 @@ src/
       StatPlaceholder.tsx  // 통계용 컴포넌트
 ```
 
-메인 페이지(/)에서는 TaskStarter.tsx를 렌더링합니다.
+- 메인 페이지(/)에서는 TaskStarter.tsx를 렌더링합니다.
+- 통계 페이지(/statistics)에서는 StatPlaceholder.tsx를 렌더링합니다.
+- `public/image` 디렉토리에서는 이미지를 관리합니다. 해당 디렉토리에 존재하는 에셋 외에도 자유롭게 이미지를 추가하셔도 됩니다.
 
-통계 페이지(/statistics)에서는 StatPlaceholder.tsx를 렌더링합니다.
-
-레이아웃 상단에는 메인/통계 페이지를 오가는 버튼이 제공됩니다.
 
 ## ✅ 작업 안내
 
@@ -63,10 +62,10 @@ src/
 
 ### 진행 방식
 
-- 레포지토리를 fork하여, 3시간 동안 자유롭게 작업합니다. (타임 1의 경우~15:00, 타임 2의 경우 ~22:00)
-- 3시간 이후 커밋은 평가 대상에 포함되지 않습니다.
-- 작업 완료 후, Repo URL을 Google Docs를 통해 제출합니다.
-- 이후 30분 동안, 📋과제 제출 방법을 참고하여 Readme에 작성한 개발 보고서를 추가해주세요.
+- 레포지토리를 fork하여, 2시간 반 동안 자유롭게 작업합니다. (타임 1의 경우 ~16:30, 타임 2의 경우 ~21:30)
+- 2시간 반 이후 커밋은 평가 대상에 포함되지 않습니다.
+- 작업 완료 후, Repo URL을 Google Form을 통해 제출합니다.
+- 시험 종료 시각 전까지, [📋 과제 제출 방법](#과제-제출-방법)을 참고하여 작성한 개발 보고서를 Google Form을 통해 제출합니다.
 
 ### 최소 요구사항
 
@@ -75,26 +74,25 @@ src/
 3. 메인 페이지 접속 시, 자동으로 `statistics` 페이지로 리다이렉션 해주세요.
 4. statistics 도메인 하위에 다음 5개 페이지가 있습니다, customer-analysis 만 구현해주시고, 나머지 페이지는 SNB 클릭 시 `404` 페이지로 연결되도록 해주세요
    - `customer-analysis` ✅ (구현 대상)
-   - `marketing-analysis` (필수 구현 대상 아님, accordion menu에 display만 시켜주세요 \_피그마 참조)
+   - `marketing-analysis` (필수 구현 대상 아님, accordion menu에 display만 시켜주세요 피그마 참조)
    - `dashboard`
    - `marketing-config`
    - `Revenue Analysis`
-   - Service Analysis
-   - Performance Management
-5. `statistics/customer-analysis`도메인 하위에 다음 4개 페이지를 제작해주세요:
+   - `Service Analysis`
+   - `Performance Management`
+5. `statistics/customer-analysis`도메인 하위에 다음 3개 페이지를 제작해주세요
    - `dashboard`
-   - `gender-distribution`
    - `funnel-distribution`
    - `retention-rate`
 6. `/statistics/customer-analysis`로 접속할 경우, 자동으로 `/statistics/customer-analysis/dashboard`로 리다이렉션 되도록 해주세요.
-7. 아코디언 형태의 사이드 네비게이션(SNB)에서, 위 4개 페이지 외의 경로로 접근할 경우 404 페이지로 연결되도록 해주세요.
+7. 아코디언 형태의 사이드 네비게이션(SNB)에서, 위 3개 페이지 외의 경로로 접근할 경우 404 페이지로 연결되도록 해주세요.
 8. `statistics` 하위 페이지는:
    - Figma에서 제공된 그래프를 구현해주세요.
    - 각 페이지 데이터는 제공된 API 명세서 엔드포인트를 호출하여 불러와주세요.
    - 그래프 구현 방식은 자유입니다.
 9. `dashboard`페이지와 `retention-rate`페이지를 제외한 각 페이지에서는 일간 / 주간 / 월간 데이터를 디스플레이해주세요.
-10. `dashboard` 페이지의 `gender-distribution`, `funnel-distribution`, `retention-rate`그래프는 당일 정보를 불러와주세요, 해당 페이지를 제외한 타 그래프는 `public/image` 내의 그래프 이미지를 활용하셔도 됩니다.
-11. `retention-rate` 페이지 내 api 호출 시 하기 파라미터를 적용해주세요
+10. `dashboard` 페이지의 `funnel-distribution`, `retention-rate`그래프는 당일 정보를 불러와주세요, 해당 페이지를 제외한 타 그래프는 `public/image` 내의 그래프 이미지를 활용하셔도 됩니다.
+11. `retention-rate` 페이지 내 api 호출 시 하기 파라미터를 기본으로 적용해주세요
 
 ```json
 {
@@ -108,9 +106,10 @@ src/
 
 ### 작업 링크
 
-- Swagger UI: https://crm-stats-backend-232897014995.asia-northeast3.run.app/docs
-- Github Repository: https://github.com/gaia-corporation/frontend-coding-test-1
-- Figma: https://www.figma.com/design/vVjeF5uA3XVR8vqV8hziky/-%EA%B0%80%EC%9D%B4%EC%95%84-Task_Figma?node-id=0-1&t=AFqMshjQXxAmpErD-1
+- [Swagger UI 바로가기](https://crm-stats-backend-232897014995.asia-northeast3.run.app/docs)
+- [GitHub Repository 바로가기](https://github.com/gaia-corporation/frontend-coding-test-1)
+- [Figma 바로가기](https://www.figma.com/design/vVjeF5uA3XVR8vqV8hziky/-%EA%B0%80%EC%9D%B4%EC%95%84-Task_Figma?node-id=0-1&t=AFqMshjQXxAmpErD-1)
+
 
 ## 📋 과제 제출 방법
 
@@ -137,11 +136,9 @@ src/
 
 ## ⚡ 주의사항
 
-추가적인 라이브러리 설치가 필요한 경우 README나 별도 안내를 참고해 주세요.
-
-Next.js App Router(App Directory 구조)를 사용하고 있으니 페이지 추가 시 폴더/파일 규칙을 준수해 주세요.
-
-React 훅(useState, useEffect)을 사용할 때는 'use client'가 필요한지 반드시 확인해 주세요.
+- 추가적인 라이브러리 설치가 필요한 경우 README나 별도 안내를 참고해 주세요.
+- Next.js App Router(App Directory 구조)를 사용하고 있으니 페이지 추가 시 폴더/파일 규칙을 준수해 주세요.
+- React 훅(useState, useEffect)을 사용할 때는 'use client'가 필요한지 반드시 확인해 주세요.
 
 ## ✉️ 문의 사항
 

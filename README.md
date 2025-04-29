@@ -211,9 +211,9 @@ Swagger UI: https://crm-stats-backend-232897014995.asia-northeast3.run.app/docs
 
 ```json
 {
-  "retention_rate": 51.16,
-  "retained_patients": 1328,
-  "total_eligible_patients": 2596,
+  "retention_rate": 51.16,         //재방문율
+  "retained_patients": 1328,       //재방문 고객 수 
+  "total_eligible_patients": 2596, //전체 고객 수 
   "retention_histogram": {
     "~30일": 348,
     "~60일": 519,

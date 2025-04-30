@@ -1,52 +1,24 @@
-"use client";
-
 import "./globals.css";
-import { ReactNode } from "react";
-import { useRouter } from "next/navigation";
+import type { ReactNode } from "react";
+import NavLink from "@/components/statistics/NavLink";
 
 export default function RootLayout({ children }: { children: ReactNode }) {
-	const router = useRouter();
-
 	return (
 		<html lang="en">
 			<body>
-				<header
-					style={{
-						padding: "1rem",
-						background: "#f5f5f5",
-						textAlign: "center",
-					}}
-				>
-					<h1>Frontend Coding Test</h1>
-					<nav style={{ marginTop: "1rem" }}>
-						<button
-							onClick={() => router.push("/")}
-							style={{
-								margin: "0 0.5rem",
-								padding: "0.5rem 1rem",
-								borderRadius: "6px",
-								border: "none",
-								backgroundColor: "#555",
-								color: "white",
-								cursor: "pointer",
-							}}
-						>
-							Main
-						</button>
-						<button
-							onClick={() => router.push("/statistics")}
-							style={{
-								margin: "0 0.5rem",
-								padding: "0.5rem 1rem",
-								borderRadius: "6px",
-								border: "none",
-								backgroundColor: "#555",
-								color: "white",
-								cursor: "pointer",
-							}}
-						>
-							통계
-						</button>
+				<header className="border-b-2 border-grap-100 w-full">
+					<nav className="px-[26]">
+						<NavLink name="대시보드" path="/1" />
+						<NavLink name="DESK" path="/2" />
+						<NavLink name="예약 관리" path="/3" />
+						<NavLink name="상담실" path="/4" />
+						<NavLink name="현황판" path="/5" />
+						<NavLink name="진료실" path="/6" />
+						<NavLink name="고객관리" path="/7" />
+						<NavLink name="어드민" path="/8" />
+						<NavLink name="통계" path="/statistics" />
+						<NavLink name="마켓팅" path="/9" />
+						<NavLink name="TM" path="/10" />
 					</nav>
 				</header>
 				<main style={{ padding: "2rem" }}>{children}</main>

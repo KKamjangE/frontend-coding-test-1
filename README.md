@@ -153,26 +153,6 @@ Swagger UI: https://crm-stats-backend-232897014995.asia-northeast3.run.app/docs
 
 ---
 
-### 📌 `GET /api/v1/stats/business/customers/gender-distribution`
-
-**설명:**  
-고객의 성별 분포 데이터를 조회합니다.
-
-#### ✅ 요청 방식
-
-`GET`
-
-#### 🔄 응답 예시
-
-```json
-{
-  "gender_distribution": {
-    "남성": 18,
-    "여성": 53
-  }
-}
-```
-
 ### 📌 `GET /api/v1/stats/business/customers/funnel-distribution`
 
 **설명:**  

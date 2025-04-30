@@ -1,6 +1,6 @@
 import "./globals.css";
 import type { ReactNode } from "react";
-import NavLink from "@/components/statistics/NavLink";
+import NavLink from "@/components/ui/NavLink";
 
 export default function RootLayout({ children }: { children: ReactNode }) {
 	return (

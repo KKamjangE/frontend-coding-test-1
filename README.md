@@ -18,11 +18,13 @@
 아래 명령어를 터미널에 입력하여 프로젝트를 실행할 수 있습니다.
 
 ```bash
-# 패키지 설치
+# 패키지 설치 (택1)
 yarn install
+npm install
 
-# 개발 서버 실행
+# 개발 서버 실행 (택1)
 yarn dev
+npm dev
 
 # 기본 실행 주소: http://localhost:3000
 ```

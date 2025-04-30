@@ -7,9 +7,10 @@ import { usePathname } from "next/navigation";
 interface NavLinkProps {
 	name: string;
 	path: string;
+	className?: string;
 }
 
-export default function NavLink({ name, path }: NavLinkProps) {
+export default function NavLink({ name, path, className }: NavLinkProps) {
 	const pathname = usePathname();
 	return (
 		<Link href={path}>
@@ -18,6 +19,7 @@ export default function NavLink({ name, path }: NavLinkProps) {
 				className={cn(
 					"px-[31] py-[21] font-bold hover:cursor-pointer",
 					pathname === path ? "text-primary-100" : "text-gray-600",
+					className,
 				)}
 			>
 				{name}

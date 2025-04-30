@@ -21,7 +21,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
 						<NavLink name="TM" path="/10" />
 					</nav>
 				</header>
-				<main style={{ padding: "2rem" }}>{children}</main>
+				<main className="px-[55]">{children}</main>
 			</body>
 		</html>
 	);

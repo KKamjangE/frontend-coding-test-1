@@ -24,7 +24,7 @@ npm install
 
 # 개발 서버 실행 (택1)
 yarn dev
-npm dev
+npm run dev
 
 # 기본 실행 주소: http://localhost:3000
 ```
